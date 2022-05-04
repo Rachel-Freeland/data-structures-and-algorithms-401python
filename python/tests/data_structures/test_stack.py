@@ -43,7 +43,6 @@ def test_pop_some():
     s.push("cucumber")
 
     s.pop()
-
     actual = s.pop()
     expected = "banana"
 
