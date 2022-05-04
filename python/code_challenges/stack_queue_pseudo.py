@@ -21,4 +21,3 @@ class PseudoQueue:
                 return self.outbox.pop()
             else:
                 raise InvalidOperationError
-
