@@ -15,7 +15,6 @@ def test_enqueue():
     expected = "apple"
     assert actual == expected
 
-
 def test_dequeue():
     q = Queue()
     q.enqueue("apple")
@@ -49,6 +48,7 @@ def test_enqueue_one():
     assert actual == expected
 
 
+
 def test_enqueue_two():
     q = Queue()
     q.enqueue("apples")
@@ -73,7 +73,7 @@ def test_dequeue_when_full():
     assert actual == expected
 
 
-@pytest.mark.skip
+
 def test_peek_post_dequeue():
     q = Queue()
     q.enqueue("apples")
@@ -91,7 +91,6 @@ def test_is_empty():
     assert actual == expected
 
 
-@pytest.mark.skip
 def test_exhausted():
     q = Queue()
     q.enqueue("apple")
