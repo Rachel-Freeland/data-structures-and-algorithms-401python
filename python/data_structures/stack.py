@@ -37,7 +37,7 @@ class Stack:
     def is_empty(self):
         '''This method takes 0 arguments and returns a boolean value denoting whether
         or not a stack is empty'''
-        if self.top is None:
+        if not self.top:
             return True
         else:
             return False
