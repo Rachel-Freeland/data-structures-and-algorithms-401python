@@ -1,16 +1,35 @@
 class BinaryTree:
     """
-    Put docstring here
+    Creates a tree class and defines the methods that work with it.
     """
 
     def __init__(self):
-        # initialization here
         pass
 
-    def some_method(self):
+    def pre_order(self):
+        """
+        Means that the root is being looked at first.
+        """
+        # method body here
+        pass
+
+    def in_order(self):
+        """
+
+        """
+        # method body here
+        pass
+
+    def post_order(self):
+        """
+
+        """
         # method body here
         pass
 
 
 class Node:
-    pass
+
+    def __init__(self):
+
+        pass
