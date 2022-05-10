@@ -87,3 +87,29 @@ class BinaryTree:
         walk(self.root, ordered_values)
 
         return ordered_values
+
+    def find_maximum_value(self):
+        """
+        Arguments: none -->
+        Returns --> the max value found in the tree
+        """
+
+        def walk(root):
+            max_value = self.root.value
+
+            if not self.root:
+                return
+
+            if self.root.value < root.right.value:
+                max_value = root.right.value
+                if root.left:
+                    return walk(root.left)
+            elif root.value > root.left.value:
+                if root.right:
+                    return walk(root.right)
+            else:
+                return max_value
+
+
+
+
