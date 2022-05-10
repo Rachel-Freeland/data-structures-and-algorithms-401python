@@ -1,35 +1,90 @@
+class Node:
+
+    def __init__(self, value):
+        self.left = None
+        self.right = None
+        self.value = value
+        pass
+
+
 class BinaryTree:
     """
     Creates a tree class and defines the methods that work with it.
     """
 
+
     def __init__(self):
-        pass
+        self.root = None
+
 
     def pre_order(self):
         """
-        Means that the root is being looked at first.
+        Traverses the tree from the root in a pre-order fashion.
+        Return: A list of values in correct order
         """
-        # method body here
-        pass
+
+        def walk(root, values):  # The root at that moment. root = Node or None. Recursive Fx
+            # Every recursive fx needs to know when to stop, aka a "base case"
+            if not root:
+                return
+            # Task 1: Do something
+            values.append(root.value)
+            # Task 2: Go left
+            walk(root.left, values)
+            # Task 3: Go right
+            walk(root.right, values)
+            pass
+
+        ordered_values = []
+        walk(self.root, ordered_values)
+
+        return ordered_values
 
     def in_order(self):
         """
-
+        Traverses the tree from the left in an "in-order" fashion.
+        Return: A list of values in correct order
         """
-        # method body here
-        pass
+
+        def walk(root, values):  # The root at that moment. root = Node or None. Recursive Fx
+            # Every recursive fx needs to know when to stop, aka a "base case"
+            if not root:
+                return
+
+            # Task 1: Go left
+            walk(root.left, values)
+
+            # Task 2: Do something
+            values.append(root.value)
+
+            # Task 3: Go right
+            walk(root.right, values)
+
+        ordered_values = []
+        walk(self.root, ordered_values)
+
+        return ordered_values
 
     def post_order(self):
         """
-
+        Traverses the tree from the root in a post-order fashion.
+        Return: A list of values in correct order
         """
-        # method body here
-        pass
 
+        def walk(root, values):  # The root at that moment. root = Node or None. Recursive Fx
+            # Every recursive fx needs to know when to stop, aka a "base case"
+            if not root:
+                return
+            # Task 1: Go left
+            walk(root.left, values)
 
-class Node:
+            # Task 2: Go right
+            walk(root.right, values)
 
-    def __init__(self):
+            # Task 3: Do something
+            values.append(root.value)
 
-        pass
+        ordered_values = []
+        walk(self.root, ordered_values)
+
+        return ordered_values

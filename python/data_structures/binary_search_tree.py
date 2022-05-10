@@ -7,7 +7,7 @@ class BinarySearchTree(BinaryTree):
     """
 
     def __init__(self):
-        # TODO
+        super()__init__()
         pass
 
     def add(self):
