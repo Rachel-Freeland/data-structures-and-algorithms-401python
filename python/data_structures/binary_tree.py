@@ -12,7 +12,6 @@ class BinaryTree:
     Creates a tree class and defines the methods that work with it.
     """
 
-
     def __init__(self):
         self.root = None
 
