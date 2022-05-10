@@ -32,7 +32,7 @@
   * Returns `True` or `False` for the `.contains()` method, given an existing or non-existing node value.
 ## API
 
-![Trees](tree.png)
+![Tree](Tree.png)
 
 ![Binary Search Tree](BST_whiteboard.png)
 
