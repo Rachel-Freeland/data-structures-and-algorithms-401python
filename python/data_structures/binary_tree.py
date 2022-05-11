@@ -15,7 +15,6 @@ class BinaryTree:
     def __init__(self):
         self.root = None
 
-
     def pre_order(self):
         """
         Traverses the tree from the root in a pre-order fashion.
@@ -93,22 +92,27 @@ class BinaryTree:
         Arguments: none -->
         Returns --> the max value found in the tree
         """
+        # Credit here goes to Dwight Lindquist, I couldn't figure out where I was going wrong until I realized that I
+        # was trying to re-invent the wheel so-to-speak. His approach made way more sense to me than the approach I was
+        # taking.
 
-        def walk(root):
-            max_value = self.root.value
+        if self.root:
+            values = self.in_order()
+            # Set the starting max_value to 0 for a clean slate
+            max_value = 0
 
-            if not self.root:
-                return
+            for num in values:
+                if num > max_value:
+                    max_value = num
+            return max_value
+        else:
+            return "The tree is empty"
 
-            if self.root.value < root.right.value:
-                max_value = root.right.value
-                if root.left:
-                    return walk(root.left)
-            elif root.value > root.left.value:
-                if root.right:
-                    return walk(root.right)
-            else:
-                return max_value
+
+
+
+
+
 
 
 
