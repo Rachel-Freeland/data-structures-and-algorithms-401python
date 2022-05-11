@@ -31,6 +31,10 @@
   * Can successfully return a collection from a `post_order` traversal.
   * Returns `True` or `False` for the `.contains()` method, given an existing or non-existing node value.
 ## API
+`.pre_order()`
+`.in_order()`
+`.post_order()`
+
 
 ![Tree](Tree.png)
 

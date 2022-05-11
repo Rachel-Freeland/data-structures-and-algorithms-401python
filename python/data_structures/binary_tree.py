@@ -94,7 +94,7 @@ class BinaryTree:
         """
         # Credit here goes to Dwight Lindquist, I couldn't figure out where I was going wrong until I realized that I
         # was trying to re-invent the wheel so-to-speak. His approach made way more sense to me than the approach I was
-        # taking.
+        # trying to take.
 
         if self.root:
             values = self.in_order()
@@ -107,10 +107,6 @@ class BinaryTree:
             return max_value
         else:
             return "The tree is empty"
-
-
-
-
 
 
 
