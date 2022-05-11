@@ -16,3 +16,8 @@ To run the code, just call the method on a tree:
 ![Tree Visual](Tree_viz.png)
 
 Calling the method on this particular tree will return: 11
+
+
+### Contributors
+Shout out to Dwight Lindquist! His code reminded me that there was no reason to re-invent the wheel and to use what was
+at my disposal!! Thank you, Dwight!
