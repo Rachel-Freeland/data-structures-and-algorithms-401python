@@ -19,3 +19,10 @@ pytest==7.0.1
 pytest-watch==4.2.0
 tomli==2.0.1
 watchdog==2.1.6
+
+requests~=2.27.1
+pip~=22.0.4
+certifi~=2021.10.8
+idna~=3.3
+urllib3~=1.26.9
+setuptools~=58.1.0
