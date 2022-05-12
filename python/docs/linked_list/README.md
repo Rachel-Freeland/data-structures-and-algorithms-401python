@@ -5,10 +5,16 @@ most defining feature of a Linked List is that each `Node` references the next `
 ## Challenge
 The challenge was to create a Node class that has properties for the value stored in the Node, and a pointer to the next
 Node. Then, create a Linked List class that includes a `head` property.
+
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+* Create a Node
+* Create a LinkedList class
+  * Define methods for working with the LinkedList
+    * `.insert()` - takes a value for an argument and inserts a Node with the new value at the `head` of the list.
+    * `.includes()` - takes a value for an argument and returns a bool indicating whether the value is somewhere in the list.
+    *  `str()` - takes no arguments but, returns a string representing all the values in the Linked List.
 
 ## API
-* `.insert()` - takes a value for an argument and inserts a Node with the new value at the `head` of the list.
-* `.includes()` - takes a value for an argument and returns a bool indicating whether the value is somewhere in the list.
-* `to_string()` - takes no arguments but, returns a string representing all the values in the Linked List.
+* `.insert()`
+* `.includes()`
+* `str()`
