@@ -1,6 +1,8 @@
 class Node:
     """Creates and initializes each node after the head node for the LinkedList"""
-    def __init__(self, value, next = "None"):
+
+    def __init__(self, value, next="None"):
+
         self.value = value  # assigns the value of the node
         self.next = next  # assigns the location of the next node
 
@@ -13,10 +15,10 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    # Returns a string representation of the LinkedList followed by an appended "NULL" to signal the end of the list
     def __str__(self):
         """Arguments: None -->
         Returns: A string representation of all values of the linked list"""
+
         string_representation = ""
         current_node = self.head
 
@@ -45,5 +47,40 @@ class LinkedList:
         return False
 
 
-class TargetError:
+    def append(self, value):
+        """Arguments: a new value  -->
+        Adds a new node with the given `value` to the end of the list"""
+        current_node = self.head
+
+        while current_node:
+            if self.head is None:
+                self.head = Node(value)
+            elif current_node.next is None:
+                current_node = Node(value)
+            else:
+                current_node = current_node.next
+
+    def insert_before(self, node_value, new_value):
+        """Arguments: the value to look for and a new value -->
+        Adds a new node with the given new value immediately before the first
+        node that has the value specified."""
+        raise TargetError
+
+    def insert_after(self, node_value, new_value):
+        """Arguments: the node_value to look for and a new value -->
+        Returns: The list with a new node containing the new_value inserted
+        after the given node_value"""
+        # new_node = Node(new_value)
+        # current_node = self.head
+        # if node_value is None:
+        #     raise TargetError("Node not found")
+        # else:
+        #     if current_node.next.value == node_value:
+        #         new_node = Node(new_value)
+        #         new_node.next = current_node
+        raise TargetError
+
+
+class TargetError(Exception):
     pass
+
