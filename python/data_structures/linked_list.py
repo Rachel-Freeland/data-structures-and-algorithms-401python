@@ -17,9 +17,9 @@ class LinkedList:
 
     def __str__(self):
         """Arguments: None -->
-        Returns a string representation of all values of the linked list"""
-        current = self.head
-        string_rep = ""
+        Returns: A string representation of all values of the linked list"""
+        string_representation = ""
+        current_node = self.head
 
         while current:
             string_rep += f'{{ {current.value} }} -> '
@@ -32,13 +32,14 @@ class LinkedList:
         Inserts a new node with that value at the head of the list"""
         self.head = Node(value, self.head)
 
-    def includes(self, target):
-        """Arguments: None-->
-        Returns a boolean value denoting if the value is present or not in the LinkedList"""
-        current = self.head
+    def includes(self, value):
+        """Arguments: value -->
+        Returns: boolean -->
+        Takes in a value and returns a boolean denoting if the value is present or not in the LinkedList"""
+        current_node = self.head
 
-        while current:
-            if current.value == target:
+        while current_node:
+            if current_node.value == value:
                 return True
             current_node = current.next_
         return False
