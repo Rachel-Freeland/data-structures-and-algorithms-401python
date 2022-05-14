@@ -23,8 +23,7 @@ class LinkedList:
         while current:
             string_rep += f'{{ {current.value} }} -> '
             current = current.next_
-        string_rep += "NULL"
-        return string_rep
+        return string_rep + "NULL"
 
     def insert(self, value):
         """Arguments: value -->
@@ -102,6 +101,29 @@ class LinkedList:
                 raise TargetError
             else:
                 current = current.next_
+
+    def kth_from_end(self, num):
+        """
+        Argument: num, as an integer -->
+        Return: the node's value from the kth place from the tail of the linked list
+        """
+        length = 0
+        current = self.head
+
+        while current is not None:
+            # Calculate length of the list
+            length += 1
+            current = current.next_
+
+        # Check for TargetError situations
+        if num < 0 or num > (length -1):
+            raise TargetError
+
+        # find the kth value from the tail
+        current = self.head
+        for i in range(length - num - 1):
+            current = current.next_
+        return current.value
 
 
 class TargetError(Exception):
