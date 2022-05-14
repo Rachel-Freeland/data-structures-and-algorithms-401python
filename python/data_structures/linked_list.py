@@ -1,4 +1,3 @@
-
 class Node:
     """Creates and initializes each node after the head node for the LinkedList"""
 
@@ -18,8 +17,8 @@ class LinkedList:
     def __str__(self):
         """Arguments: None -->
         Returns: A string representation of all values of the linked list"""
-        string_representation = ""
-        current_node = self.head
+        string_rep = ""
+        current = self.head
 
         while current:
             string_rep += f'{{ {current.value} }} -> '
@@ -32,14 +31,14 @@ class LinkedList:
         Inserts a new node with that value at the head of the list"""
         self.head = Node(value, self.head)
 
-    def includes(self, value):
+    def includes(self, target_value):
         """Arguments: value -->
         Returns: boolean -->
         Takes in a value and returns a boolean denoting if the value is present or not in the LinkedList"""
         current_node = self.head
 
         while current_node:
-            if current_node.value == value:
+            if current_node.value == target_value:
                 return True
             current_node = current.next_
         return False
@@ -64,6 +63,7 @@ class LinkedList:
         """Arguments: the value to look for and a new value -->
         Adds a new node with the given new value immediately before the first
         node that has the value specified."""
+
         if not self.head:
             raise TargetError
 
@@ -72,19 +72,18 @@ class LinkedList:
                 self.insert(value)
                 return
 
-                current = self.head
-                while current.next_:
-                    if current.next_.value == target.value:
-                        previous = current.next_
-                        current.next_ = Node(value, previous)
-                    else:
-                        current = current.next_
+            current = self.head
+            while current.next_:
+                if current.next_.value == target:
+                    previous = current.next_
+                    current.next_ = Node(value, previous)
+                    return
+                else:
+                    current = current.next_
             else:
                 raise TargetError
         except:
             raise TargetError
-
-
 
     def insert_after(self, target, value):
         """Arguments: the node_value to look for and a new value -->
@@ -107,4 +106,3 @@ class LinkedList:
 
 class TargetError(Exception):
     pass
-
