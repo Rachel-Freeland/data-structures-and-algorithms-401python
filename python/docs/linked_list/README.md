@@ -18,3 +18,5 @@ Node. Then, create a Linked List class that includes a `head` property.
 * `.insert()`
 * `.includes()`
 * `str()`
+
+![CC5](CC5.png)
