@@ -17,10 +17,12 @@ class Queue:
         Returns: nothing -->
         Adds a new node with that value to the `back` of the queue with an
         O(1) Time performance."""
-        if self.rear: # if a self.rear exists then,
-            self.rear.next = Node(value, self.rear)  # add node with new value to spot behind current self.rear
+        new_node = Node(value)
+
+        if self.rear:
+            self.rear.next_ = new_node
         else:
-            self.rear = Node(value, self.rear)  # if there is no self.rear, create one and label it as the rear
+            self.rear = new_node
             self.front = self.rear
 
     def dequeue(self):
@@ -33,7 +35,7 @@ class Queue:
             raise InvalidOperationError
 
         old_front = self.front
-        self.front = old_front.next
+        self.front = old_front.next_
         old_front.next = None
         return old_front.value
 
@@ -51,5 +53,4 @@ class Queue:
         Arguments: none -->
         Returns: a boolean -->
         Takes 0 arguments and returns a bool indicating whether the queue is empty."""
-        if not self.front:
-            return not self.front
+        return self.front is None
