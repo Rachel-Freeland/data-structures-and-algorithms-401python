@@ -4,7 +4,20 @@
 
 ### Folder and Challenge Setup
 
-Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for instructions for each DS&A assignment type.
+Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for
+instructions for each DS&A assignment type.
+
+### List of Data Structures Completed
+
+- [Linked Lists](docs/linked_list/README.md)
+- [Linked lists insertions](docs/linked_list_insertions/README.md)
+- [Linked lists kth value](docs/linked_list_kth/README.md)
+- [Linked list zip](docs/linked_list_zip/README.md)
+- [Stack and Queue](docs/stack_and_queue/README.md)
+- [Stack and Queue pseudo](docs/stack_queue_pseudo/README.md)
+- [Stack and Queue animal shelter](docs/stack_queue_animal_shelter/README.md)
+- []()
+- []()
 
 ### Data Structure: New Implementation
 
