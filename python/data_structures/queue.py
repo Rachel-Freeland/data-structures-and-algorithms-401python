@@ -12,17 +12,14 @@ class Queue:
         self.rear = None
 
     def enqueue(self, value):
-        """
-        Argument(s): a value  -->
-        Returns: nothing -->
+        """Arguments: a value  -->
         Adds a new node with that value to the `back` of the queue with an
         O(1) Time performance."""
-        new_node = Node(value)
-
-        if self.rear:
-            self.rear.next_ = new_node
+        if self.rear:  # if a self.rear exists then,
+            # add a node with the new value to the spot behind the current self.rear
+            self.rear.next = Node(value, self.rear)
         else:
-            self.rear = new_node
+            self.rear = Node(value, self.rear)  # if there is no self. rear, create one and label it as the rear
             self.front = self.rear
 
     def dequeue(self):
@@ -49,6 +46,7 @@ class Queue:
         return self.front.value
 
     def is_empty(self):
+
         """
         Arguments: none -->
         Returns: a boolean -->
