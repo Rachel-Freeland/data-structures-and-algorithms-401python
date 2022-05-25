@@ -1,4 +1,4 @@
-from python.code_challenges.insertion_sort import insertion_sort
+from code_challenges.insertion_sort import insertion_sort
 
 
 def test_input_array():
