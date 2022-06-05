@@ -11,9 +11,15 @@ This is a new data structure implementation
 This is an implementation of a graph represented by an adjacency list (a dictionary-like list, a hash table)
 All operations are an O(1) for space and time due to the hash table like structure of the adjacency list.
 ## API
-* `add_node(value)`: adds a node to the graph
-* `add_edge(start_vertex, end_vertex, weight)`: adds a new edge between 2 nodes in the graph and, if specified, a
-  weight can be added to that edge. `NOTE:`The 2 nodes should already be in the graph
-* `get_nodes()`: returns all the nodes in the graph as a collection
-* `get_neighbors(vertex)`: returns all the edges in the graph as a collection
-* `size()`: gets the total number of nodes in the graph
+* `add_node(value)`:
+  * adds a node to the graph
+* `add_edge(start_vertex, end_vertex, weight)`:
+  * adds a new edge between 2 nodes in the graph and, if specified, a
+    weight can be added to that edge.
+  * `NOTE:`The 2 nodes should already be in the graph
+* `get_nodes()`:
+  * returns all the nodes in the graph as a collection
+* `get_neighbors(vertex)`:
+  * returns all the edges in the graph as a collection
+* `size()`:
+  * gets the total number of nodes in the graph
