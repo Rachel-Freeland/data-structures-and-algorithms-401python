@@ -15,7 +15,7 @@ class Queue:
         """Arguments: a value  -->
         Adds a new node with that value to the `back` of the queue with an
         O(1) Time performance."""
-        if self.rear: # if a self.rear exists then,
+        if self.rear:  # if a self.rear exists then,
             self.rear.next = Node(value, self.rear)  # add a node with the new value to the spot behind the current
             # self.rear
         else:
@@ -23,8 +23,13 @@ class Queue:
             self.front = self.rear
 
     def dequeue(self):
-        """Arguments: none -->
-        Removes and returns the value from the node at the front of the queue. Will raise an exception when called on an empty queue"""
+        """
+        Arguments: none -->
+        Returns: value of the node that was removed from the front of the queue -->
+        Removes and returns the value from the node at the front of the queue. Will raise an exception when called
+        on an empty queue
+        """
+
         if not self.front:
             raise InvalidOperationError
 
@@ -34,15 +39,22 @@ class Queue:
         return old_front.value
 
     def peek(self):
-        """Arguments: none -->
+        """
+        Arguments: none -->
         Returns: The value of the node located at the front of the queue.
-        Will raise an exception when called on an empty queue."""
+        Will raise an exception when called on an empty queue.
+        """
+
         if not self.front:
             raise InvalidOperationError
         return self.front.value
 
     def is_empty(self):
-        """Arguments: none -->
-        Returns: Boolean indicating whether the queue is empty."""
+        """
+        Arguments: none -->
+        Returns: a boolean -->
+        Takes 0 arguments and returns a bool indicating whether the queue is empty.
+        """
+
         if not self.front:
             return not self.front
