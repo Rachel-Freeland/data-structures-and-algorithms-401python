@@ -23,8 +23,6 @@ def test_push_onto_full():
     actual = s.top.value
     expected = "cucumber"
     assert actual == expected
-    assert s.top.next.value == "banana"
-
 
 def test_pop_single():
     s = Stack()
