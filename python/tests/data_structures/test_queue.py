@@ -7,13 +7,13 @@ def test_exists():
     assert Queue
 
 
-
 def test_enqueue():
     q = Queue()
     q.enqueue("apple")
     actual = q.front.value
     expected = "apple"
     assert actual == expected
+
 
 def test_dequeue():
     q = Queue()
@@ -48,7 +48,6 @@ def test_enqueue_one():
     assert actual == expected
 
 
-
 def test_enqueue_two():
     q = Queue()
     q.enqueue("apples")
@@ -71,7 +70,6 @@ def test_dequeue_when_full():
     actual = q.dequeue()
     expected = "apples"
     assert actual == expected
-
 
 
 def test_peek_post_dequeue():
