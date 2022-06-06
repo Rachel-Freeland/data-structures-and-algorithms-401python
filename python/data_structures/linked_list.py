@@ -1,15 +1,9 @@
 class Node:
     """Creates and initializes each node after the head node for the LinkedList"""
-<<<<<<< HEAD
-    def __init__(self, value, next_="None"):
-        self.value = value  # assigns the value of the node
-        self.next = next_  # assigns the location of the next node
-=======
 
     def __init__(self, value, next_="None"):
         self.value = value  # assigns the value of the node
         self.next_ = next_  # assigns the location of the next node
->>>>>>> 4e8d246a4c0dfd9210e06b5c84ee0e84221695c8
 
 
 class LinkedList:
@@ -20,35 +14,19 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-<<<<<<< HEAD
-    # Returns a string representation of the LinkedList followed by an appended "NULL" to signal the end of the list
     def __str__(self):
-        """Takes no arguments and returns a string representation of all values of the linked list"""
-        string_representation = ""
-        current_node = self.head
-=======
-    def __str__(self):
-        """Arguments: None -->
-        Returns: A string representation of all values of the linked list"""
+        """
+        Arguments: None -->
+        Returns: A string representation of all values of the linked list
+        """
         string_rep = ""
         current = self.head
->>>>>>> 4e8d246a4c0dfd9210e06b5c84ee0e84221695c8
 
         while current:
             string_rep += f'{{ {current.value} }} -> '
             current = current.next_
         return string_rep + "NULL"
 
-<<<<<<< HEAD
-    # Inserts a new node with the given value at the beginning of the list
-    def insert(self, value):
-        """Takes in a value and inserts a new node with that value at the head of the list"""
-        self.head = Node(value, self.head)
-
-    # Determines if a value is included in a LinkedList and returns True if present and False if not in the LinkedList
-    def includes(self, value):
-        """Takes in a value and returns a boolean value denoting if the value is present or not in the LinkedList"""
-=======
     def insert(self, value):
         """Arguments: value -->
         Inserts a new node with that value at the head of the list"""
@@ -58,7 +36,7 @@ class LinkedList:
         """Arguments: value -->
         Returns: boolean -->
         Takes in a value and returns a boolean denoting if the value is present or not in the LinkedList"""
->>>>>>> 4e8d246a4c0dfd9210e06b5c84ee0e84221695c8
+
         current_node = self.head
 
         while current_node:
@@ -67,10 +45,6 @@ class LinkedList:
             current_node = current_node.next_
         return False
 
-<<<<<<< HEAD
-
-class TargetError:
-=======
     def append(self, value):
         """Arguments: value -->
         Returns: nothing -->
@@ -156,5 +130,5 @@ class TargetError:
 
 
 class TargetError(Exception):
->>>>>>> 4e8d246a4c0dfd9210e06b5c84ee0e84221695c8
+
     pass
