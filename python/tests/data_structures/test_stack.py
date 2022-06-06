@@ -24,7 +24,6 @@ def test_push_onto_full():
     expected = "cucumber"
     assert actual == expected
 
-
 def test_pop_single():
     s = Stack()
     s.push("apple")
