@@ -15,12 +15,10 @@ def test_empty_head():
     assert linked.head is None
 
 
-
 def test_populated_head():
     linked = LinkedList()
     linked.insert("apple")
     assert linked.head.value == "apple"
-
 
 
 def test_to_string_empty():
@@ -29,14 +27,12 @@ def test_to_string_empty():
     assert str(linked_list) == "NULL"
 
 
-
 def test_to_string_single():
     linked_list = LinkedList()
 
     linked_list.insert("apple")
 
     assert str(linked_list) == "{ apple } -> NULL"
-
 
 
 def test_to_string_double():
@@ -51,7 +47,6 @@ def test_to_string_double():
     assert str(linked_list) == "{ banana } -> { apple } -> NULL"
 
 
-
 def test_includes_true():
     linked_list = LinkedList()
 
@@ -60,7 +55,6 @@ def test_includes_true():
     linked_list.insert("banana")
 
     assert linked_list.includes("apple")
-
 
 
 def test_includes_false():
