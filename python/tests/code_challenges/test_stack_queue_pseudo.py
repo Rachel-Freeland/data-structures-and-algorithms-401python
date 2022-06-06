@@ -19,9 +19,9 @@ def test_enqueue_two():
     pq.enqueue("apples")
     pq.enqueue("bananas")
 
-#    actual = pq.dequeue()
-#    expected = "apples"
-#    assert actual == expected
+    actual = pq.dequeue()
+    expected = "apples"
+    assert actual == expected
 
     actual = pq.dequeue()
     expected = "bananas"
