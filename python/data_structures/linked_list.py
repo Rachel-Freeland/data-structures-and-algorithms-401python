@@ -39,7 +39,7 @@ class LinkedList:
         while current_node:
             if current_node.value == target_value:
                 return True
-            current_node = current.next_
+            current_node = current_node.next_
         return False
 
     def append(self, value):
