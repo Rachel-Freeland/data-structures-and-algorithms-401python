@@ -23,8 +23,6 @@ def test_push_onto_full():
     actual = s.top.value
     expected = "cucumber"
     assert actual == expected
-    assert s.top.next.value == "banana"
-
 
 
 def test_pop_single():
@@ -71,14 +69,12 @@ def test_peek():
     assert actual == expected
 
 
-
 def test_peek_empty():
     s = Stack()
     with pytest.raises(InvalidOperationError) as e:
         s.peek()
 
     assert str(e.value) == "Method not allowed on empty collection"
-
 
 
 def test_pop_empty():

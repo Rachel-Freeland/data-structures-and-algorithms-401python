@@ -1,5 +1,5 @@
-from data_structures.invalid_operation_error import InvalidOperationError
 from data_structures.stack import Stack
+
 
 class PseudoQueue:
 
@@ -15,9 +15,8 @@ class PseudoQueue:
     def dequeue(self):
         """Arguments: none -->
         Extracts a value from PseudoQueue using FIFO"""
-        while self.outbox.is_empty:
-            if self.inbox.is_empty:
-                self.outbox.push(self.inbox.pop())
-                return self.outbox.pop()
-            else:
-                raise InvalidOperationError
+        if self.outbox.is_empty():
+            while not self.inbox.is_empty():
+                temp_node = self.inbox.pop()
+                self.outbox.push(temp_node)
+        return self.outbox.pop()
