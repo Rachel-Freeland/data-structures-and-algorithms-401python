@@ -28,15 +28,21 @@ class Stack:
             return old_top.value
 
     def peek(self):
-        """This method takes 0 arguments and returns the value of the node located
-        at the top of the stack. An exception is raised when called on an empty stack."""
+        """
+        This method takes 0 arguments and returns the value of the node located
+        at the top of the stack. An exception is raised when called on an empty stack.
+        """
+
         if self.top is None:
             raise InvalidOperationError("Method not allowed on empty collection")
         else:
             return self.top.value
 
     def is_empty(self):
-        """This method takes 0 arguments and returns a boolean value denoting whether a stack is empty"""
+        """
+        This method takes 0 arguments and returns a boolean value denoting whether a stack is empty
+        """
+
         if not self.top:
             return True
         else:
