@@ -20,4 +20,3 @@ class PseudoQueue:
                 temp_node = self.inbox.pop()
                 self.outbox.push(temp_node)
         return self.outbox.pop()
-
