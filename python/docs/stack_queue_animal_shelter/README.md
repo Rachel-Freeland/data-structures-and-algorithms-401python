@@ -3,13 +3,13 @@ Create a class called AnimalShelter which holds only dogs and cats. Using a FIFO
 dequeue methods according to the animal preferred.
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+![AnimalShelter](AnimalShelter.png)
 
 ## Approach & Efficiency
 Using a separate queue for dogs and one for cats makes retrieving according to preference easier.
 * Create a queue for dogs and one for cats.
 * Depending on a person's preference, return the cat or dog from the appropriate queue.
-* The BigO for both time and space is O(1).
+* The BigO for time O(1) and O(n) for space.
 
 ## Solution
 * `enqueue(animal)`: will add the dog or cat to the appropriate queue
