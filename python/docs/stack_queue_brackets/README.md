@@ -7,7 +7,7 @@ boolean indicating if the string brackets are balanced.
 
 ## Approach & Efficiency
 [Code](/code_challenges/stack_queue_brackets.py)
-* BigO for this function is O(n) for both time and space
+* BigO for this function is O(n) for space and O(1) for time.
 * Begin by checking if the stack is empty and if the character in question is a closing brace.
 * If empty and a closing brace, return False
 * If the char is an opening brace, push its corresponding character for closing brace to the stack
