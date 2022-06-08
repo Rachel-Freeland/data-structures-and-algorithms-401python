@@ -1,5 +1,24 @@
-from data_structures.binary_tree import BinaryTree
+from data_structures.queue import Queue
 
 
-def breadth_first():
-    pass
+def breadth_first(tree):
+    tree_values = []
+    queue = Queue()
+
+    if not tree or not tree.root:
+        return tree_values
+
+    if not queue.front:
+        queue.enqueue(tree.root)
+
+    while queue.front:
+        front = queue.dequeue()
+        tree_values.append(front.value)
+
+        if front.left:
+            queue.enqueue(front.left)
+
+        if front.right:
+            queue.enqueue(front.right)
+
+    return tree_values
