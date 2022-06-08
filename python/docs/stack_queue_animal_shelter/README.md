@@ -6,7 +6,8 @@ dequeue methods according to the animal preferred.
 ![AnimalShelter](AnimalShelter.png)
 
 ## Approach & Efficiency
-Using a separate queue for dogs and one for cats makes retrieving according to preference easier.
+[Code](/code_challenges/stack_queue_animal_shelter.py)
+* Using a separate queue for dogs and one for cats makes retrieving according to preference easier.
 * Create a queue for dogs and one for cats.
 * Depending on a person's preference, return the cat or dog from the appropriate queue.
 * The BigO for time O(1) and O(n) for space.
