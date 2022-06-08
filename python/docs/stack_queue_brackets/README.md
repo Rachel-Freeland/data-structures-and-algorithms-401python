@@ -1,10 +1,12 @@
 # Challenge Summary
-Write a function to validate whether the brackets in a string are balanced.
+Write a function to validate whether the brackets in a string are balanced. It should take in a string and return a
+boolean indicating if the string brackets are balanced.
 
 ## Whiteboard Process
-<!-- Embedded whiteboard image -->
+![validation](validation.png)
 
 ## Approach & Efficiency
+[Code](/code_challenges/stack_queue_brackets.py)
 * BigO for this function is O(n) for both time and space
 * Begin by checking if the stack is empty and if the character in question is a closing brace.
 * If empty and a closing brace, return False
