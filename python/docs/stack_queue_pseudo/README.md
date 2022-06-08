@@ -3,7 +3,7 @@ Using a standard queue interface, create a new class, PseudoQueue. Utilize 2 `St
 queue that uses the FIFO approach.
 
 ## Whiteboard Process
-
+![pseudoQueue](pseudoQueue.png)
 
 ## Approach & Efficiency
 * Create 2 Stacks: inbox and outbox
