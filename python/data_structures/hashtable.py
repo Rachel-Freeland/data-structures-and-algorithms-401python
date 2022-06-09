@@ -16,13 +16,14 @@ class Hashtable:
         Returns: index in the collection for the key-->
         This method returns a hashed key for the index of the array where the key/value pair should be placed.
         """
+        print(key)
         chars_sum = 0
 
         for char in key:
             chars_sum += ord(char)
 
         chars_primed = chars_sum * 599
-        index = chars_primed * self.size
+        index = chars_primed % self.size
 
         return index
 
@@ -40,8 +41,9 @@ class Hashtable:
         if bucket is None:
             bucket = LinkedList()
             self.buckets[index] = bucket
-        else:
-            bucket[index] = (key, value)
+
+        # TODO: update vs insert
+        bucket.insert((key, value))
 
     def get(self, key):
         """
@@ -50,7 +52,6 @@ class Hashtable:
         This method takes in a key, hashes it, and retrieves the value associated with that index.
         """
         index = self.hash(key)
-
         bucket = self.buckets[index]
 
         current = bucket.head
@@ -60,7 +61,8 @@ class Hashtable:
             current_key = pair[0]
             if current_key == key:
                 return pair[1]
-            current = current.next
+
+            current = current.next_
 
         return None
 
@@ -71,7 +73,26 @@ class Hashtable:
         This method takes in a key and returns a boolean value indicating if the key exists in the table.
         """
         index = self.hash(key)
+        bucket = self.buckets[index]
 
+        if bucket is None:
+            return False
+        else:
+            current = bucket.head
+            while current:
+                if current.value[0] == key:
+                    return True
+                current = current.next_
+            return False
 
+    def keys(self):
+        key_list = []
 
-
+        for bucket in self.buckets:
+            if bucket:
+                current = bucket.head
+                while current:
+                    pair = current.value
+                    key_list.append(pair[0])
+                    current = current.next_
+        return key_list
