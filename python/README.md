@@ -9,6 +9,9 @@ instructions for each DS&A assignment type.
 
 ### List of Data Structures Completed
 
+- [array binary search](docs/array-binary-search/README.md)
+- [array-insert-shift](docs/array-insert-shift/README.md)
+- [array-reverse](docs/array-reverse/README.md)
 - [Linked Lists](docs/linked_list/README.md)
 - [Linked lists insertions](docs/linked_list_insertions/README.md)
 - [Linked lists kth value](docs/linked_list_kth/README.md)
