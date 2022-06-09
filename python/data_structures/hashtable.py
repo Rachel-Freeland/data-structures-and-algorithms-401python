@@ -42,6 +42,7 @@ class Hashtable:
             bucket = LinkedList()
             self.buckets[index] = bucket
 
+        # TODO: update vs insert
         bucket.insert((key, value))
 
     def get(self, key):
@@ -92,6 +93,6 @@ class Hashtable:
                 current = bucket.head
                 while current:
                     pair = current.value
-                    key_list.append(current.value[0])
+                    key_list.append(pair[0])
                     current = current.next_
         return key_list
