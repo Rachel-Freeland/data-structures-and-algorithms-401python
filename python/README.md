@@ -16,7 +16,7 @@ instructions for each DS&A assignment type.
 - [Stack and Queue](docs/stack_and_queue/README.md)
 - [Stack and Queue pseudo](docs/stack_queue_pseudo/README.md)
 - [Stack and Queue animal shelter](docs/stack_queue_animal_shelter/README.md)
-- []()
+- [Hashtables](docs/hashtable/README.md)
 - []()
 
 ### Data Structure: New Implementation
