@@ -16,7 +16,6 @@ class Hashtable:
         Returns: index in the collection for the key-->
         This method returns a hashed key for the index of the array where the key/value pair should be placed.
         """
-        print(key)
         chars_sum = 0
 
         for char in key:
