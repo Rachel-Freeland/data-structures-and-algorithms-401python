@@ -23,7 +23,7 @@ class Stack:
             raise InvalidOperationError("Method not allowed on empty collection")
         else:
             old_top = self.top
-            self.top = self.top.next
+            self.top = self.top.next_
             old_top.next = None
             return old_top.value
 
