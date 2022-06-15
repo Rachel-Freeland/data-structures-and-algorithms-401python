@@ -78,6 +78,7 @@ def test_example_from_reading():
 
     expected = [2, 7, 5, 2, 6, 9, 5, 11, 4]
     actual = breadth_first(tree)
+    print(actual)
 
     assert actual == expected
 

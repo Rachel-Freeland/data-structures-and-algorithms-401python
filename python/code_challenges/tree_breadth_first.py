@@ -8,10 +8,9 @@ def breadth_first(tree):
     if not tree or not tree.root:
         return tree_values
 
-    if not queue.front:
-        queue.enqueue(tree.root)
+    queue.enqueue(tree.root)
 
-    while queue.front:
+    while not queue.front.is_empty():
         front = queue.dequeue()
         tree_values.append(front.value)
 

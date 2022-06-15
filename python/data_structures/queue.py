@@ -16,13 +16,12 @@ class Queue:
         Adds a new node with that value to the `back` of the queue with an
         O(1) Time performance."""
 
-        if self.rear:  # if a self.rear exists then,
-
-            self.rear.next = Node(value, self.rear)  # add a node with the new value to the spot behind the current
-            # self.rear
+        if self.front is None:
+            self.front = Node(value)
+            self.rear = self.front
         else:
-            self.rear = Node(value, self.rear)  # if there is no self. rear, create one and label it as the rear
-            self.front = self.rear
+            self.rear.next_ = Node(value)
+            self.rear = self.rear.next_
 
     def dequeue(self):
         """
@@ -58,5 +57,7 @@ class Queue:
         Takes 0 arguments and returns a bool indicating whether the queue is empty.
         """
 
-        if not self.front:
-            return not self.front
+        if self.front:
+            return False
+        else:
+            return True
