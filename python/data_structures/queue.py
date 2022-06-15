@@ -35,8 +35,8 @@ class Queue:
             raise InvalidOperationError
 
         old_front = self.front
-        self.front = old_front.next_
-        old_front.next = None
+        self.front = self.front.next_
+        old_front.next_ = None
         return old_front.value
 
     def peek(self):
@@ -57,7 +57,7 @@ class Queue:
         Takes 0 arguments and returns a bool indicating whether the queue is empty.
         """
 
-        if self.front:
-            return False
-        else:
+        if self.front is None:
             return True
+        else:
+            return False

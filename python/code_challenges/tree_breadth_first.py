@@ -10,7 +10,7 @@ def breadth_first(tree):
 
     queue.enqueue(tree.root)
 
-    while not queue.front.is_empty():
+    while queue.front:
         front = queue.dequeue()
         tree_values.append(front.value)
 
