@@ -1,134 +1,179 @@
 class Node:
-    """Creates and initializes each node after the head node for the LinkedList"""
+    """
+    An object that has properties for the value stored in the Node and a pointer to the next Node.
 
-    def __init__(self, value, next_="None"):
-        self.value = value  # assigns the value of the node
-        self.next_ = next_  # assigns the location of the next node
+    Attribute:
+        value: Data stored in the node
+        next_node: Reference to the next node in the linked list
+    """
+
+    def __init__(self, value, next_node=None):
+        """
+        Creates an instance of a Node
+        """
+        self.value = value
+        self.next_node = next_node
+
+    def __repr__(self):
+        return "%s ->" % self.value
 
 
 class LinkedList:
     """
-    This class creates and initializes a LinkedList. This class also includes methods to work with a linked list
-    """
+    A data structure that represents a list of items. The list maintains a reference to the first node, also called
+    the head. Each node points to the next node in the list.
 
+    Attribute:
+        head: The head node of the list
+    Method:
+        insert(value)
+        includes(value)
+        append(value)
+        insert_before(target_value, new_value)
+        insert_after(target_value, new_value)
+        kth_from_end(k)
+    """
     def __init__(self):
         self.head = None
+        self.tail = None
+        self.count = 0
 
     def __str__(self):
-        """
-        Arguments: None -->
-        Returns: A string representation of all values of the linked list
-        """
         string_rep = ""
-        current = self.head
-
-        while current:
-            string_rep += f'{{ {current.value} }} -> '
-            current = current.next_
-        return string_rep + "NULL"
-
-    def insert(self, value):
-        """Arguments: value -->
-        Inserts a new node with that value at the head of the list"""
-        self.head = Node(value, self.head)
-
-    def includes(self, target_value):
-        """Arguments: value -->
-        Returns: boolean -->
-        Takes in a value and returns a boolean denoting if the value is present or not in the LinkedList"""
-
         current_node = self.head
 
         while current_node:
-            if current_node.value == target_value:
+            string_rep += f'{{ {current_node.value} }} -> '
+            current_node = current_node.next_node
+        return string_rep + "NULL"
+
+    def insert(self, value):
+        """
+        Parameters:
+            value: new value to be added
+        Return:
+            nothing
+        Attribute:
+            BigO Time Complexity: O(1)
+        Adds a new node with the given value to the "head" of the list.
+        """
+        self.head = Node(value, self.head)
+        self.count += 1
+
+    def includes(self, value):
+        """
+        Parameters:
+            value: value to look for
+        Returns:
+            bool
+        Attribute:
+            BigO Time Complexity: O(n)
+        Takes in a value and returns a bool indicating if the value exists as a Node's value somewhere within the list.
+        """
+        current_node = self.head
+
+        while current_node:
+            if current_node.value == value:
                 return True
-            current_node = current_node.next_
+            current_node = current_node.next_node
         return False
 
     def append(self, value):
-        """Arguments: value -->
-        Returns: nothing -->
-        Adds a new node with the given `value` to the end of the list"""
+        """
+        Arguments:
+            value: new value to be added
+        Return:
+            nothing
+        Attribute:
+            BigO Time Complexity: O(n)
+        Takes in a new value and adds a new node with the given value to the end of the linked list.
+        """
+        new_node = Node(value)
 
-        new_node = Node(value, None)
-
-        if self.head is None:
+        if not self.head:
             self.head = new_node
+            self.count += 1
             return
 
-        current = self.head
-        while current.next_:
-            current = current.next_
-        current.next_ = new_node
+        current_node = self.head
+        while current_node.next_node:
+            current_node = current_node.next_node
+        current_node.next_node = new_node
+        self.count += 1
 
-    def insert_before(self, target, value):
-        """Arguments: the value to look for and a new value -->
-        Adds a new node with the given new value immediately before the first
-        node that has the value specified."""
-
+    def insert_before(self, target_value, new_value):
+        """
+        Arguments:
+            target_value: the value to look for
+            new_value: the new value to be inserted before the target value
+        Return:
+            nothing
+        Attribute:
+            BigO Time Complexity: O(n)
+        Raises:
+            TargetError: if there is no self.head
+        Adds the new_value immediately before the first node with the given target_value in a linked list.
+        """
         if not self.head:
             raise TargetError
 
-        try:
-            if self.head.value == target:
-                self.insert(value)
-                return
+        if self.head.value == target_value:
+            self.insert(new_value)
+            return
 
-            current = self.head
-            while current.next_:
-                if current.next_.value == target:
-                    previous = current.next_
-                    current.next_ = Node(value, previous)
-                    return
-                else:
-                    current = current.next_
+        current_node = self.head
+        while current_node.next_node:
+            if current_node.next_node.value == target_value:
+                previous_node = current_node.next_node
+                current_node.next_node = Node(new_value, previous_node)
+                self.count += 1
+                break
             else:
-                raise TargetError
-        except:
-            raise TargetError
+                current_node = current_node.next_node
 
-    def insert_after(self, target, value):
-        """Arguments: the node_value to look for and a new value -->
-        Returns: The list with a new node containing the new_value inserted
-        after the given node_value"""
+    def insert_after(self, target_value, new_value):
+        """
+        Arguments:
+            target_value: the value to look for
+            new_value: the new value to be inserted
+        Return:
+            nothing
+        Raises:
+            TargetError: if there is no node with the target value and the end of the list is reached OR if there is no self.head
+        """
         if not self.head:
             raise TargetError
 
-        current = self.head
-        while current:
-            if current.value == target:
-                current.next_ = Node(value, current.next_)
+        current_node = self.head
+        while current_node:
+            if current_node.value == target_value:
+                current_node.next_node = Node(new_value, current_node.next_node)
+                self.count += 1
                 break
 
-            if not current.next_:
+            if not current_node.next_node:
                 raise TargetError
             else:
-                current = current.next_
+                current_node = current_node.next_node
 
-    def kth_from_end(self, num):
+    def kth_from_end(self, k):
         """
-        Argument: num, as an integer -->
-        Return: the node's value from the kth place from the tail of the linked list
+        Arguments:
+            k: the k<sup>th</sup> position from the end
+        Return:
+            value: the Node's value that is located at the position
         """
-        length = 0
-        current = self.head
-
-        while current is not None:
-            # Calculate length of the list
-            length += 1
-            current = current.next_
-
-        # Check for TargetError situations
-        if num < 0 or num > (length -1):
+        # Credit here to be given to Dwight Lindquist
+        if k < 0 or k >= self.count:
             raise TargetError
+        else:
+            current_node = self.head
+            position = self.count - k
 
-        # find the kth value from the tail
-        current = self.head
-        for i in range(length - num - 1):
-            current = current.next_
-        return current.value
+            for i in range(position - 1):
+                current_node = current_node.next_node
+            return current_node.value
 
 
 class TargetError(Exception):
-
     pass
