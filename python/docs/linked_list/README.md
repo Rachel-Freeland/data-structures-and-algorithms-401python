@@ -15,6 +15,7 @@ Node. Then, create a Linked List class that includes a `head` property.
     *  `str()` - takes no arguments but, returns a string representing all the values in the Linked List.
 
 ## API
+[Code](/data_structures/linked_list.py)
 * `.insert()`
 * `.includes()`
 * `str()`
