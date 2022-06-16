@@ -6,7 +6,6 @@ class Node:
         value: Data stored in the node
         next_node: Reference to the next node in the linked list
     """
-
     def __init__(self, value, next_node=None):
         """
         Creates an instance of a Node

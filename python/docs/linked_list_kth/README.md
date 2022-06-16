@@ -10,6 +10,7 @@ TargetError and then iterate over the list until the kth value is reached. Then,
 
 ## Solution
 [Code](/data_structures/linked_list.py)
+
 * `llist.kth_from_end(2)` - will return the value located 2 nodes from the tail
 * Input:
 * head -> 1 -> 3 -> 5 -> Null
