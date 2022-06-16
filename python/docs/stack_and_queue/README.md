@@ -15,13 +15,13 @@ Implement a new data structure class and methods that work with stacks and queue
 I followed the examples in the class lecture and the notes provided on the data structures to implement these solutions.
 
 ## API
-Stack APIs
+[Stack Code](/data_structures/stack.py)
 * `push(value)` - pushes a new node onto the top of the stack with the value specified.
 * `pop()` - removes the top node and returns the value
 * `peek()` - returns the value at the top of the stack
 * `is_empty()` - returns a boolean value to denote whether the stack is empty or not.
 
-Queue APIs
+[Queue Code](/data_structures/queue.py)
 * `enqueue(value)` - adds a new node with the specified value to the back of the queue
 * `dequeue()` - removes a node from the front of the queue and returns its value
 * `peek()` - returns the value of the node at the front of the queue
