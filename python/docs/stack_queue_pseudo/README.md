@@ -15,6 +15,7 @@ queue that uses the FIFO approach.
 * The BigO for time is O(n) and space is O(n) as well.
 
 ## Solution
+[Code](/code_challenges/stack_queue_pseudo.py)
 * `enqueue(value)`: will push the value onto the stack
 * `dequeue()`: will remove the top element from the stack and return the value
 
