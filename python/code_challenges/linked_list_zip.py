@@ -23,19 +23,19 @@ def zip_lists(a, b):
     # while there is a list_a and a list_b...
     while list_a and list_b:
         new_list.append(list_a.value)  # append the node to the list
-        list_a = list_a.next_  # move the pointer for the list_a
+        list_a = list_a.next_node  # move the pointer for the list_a
         new_list.append(list_b.value)  # append list b... beginning of alternating sequence
-        list_b = list_b.next_  # move the pointer for the list_b
+        list_b = list_b.next_node  # move the pointer for the list_b
 
     # while there is a list_a and not a list_b, finish appending with the remainder of list_a
     while list_a and not list_b:
         new_list.append(list_a.value)
-        list_a = list_a.next_
+        list_a = list_a.next_node
 
     # while there is a list_b and not a list_a, finish appending with the remainder of list_b
     while list_b and not list_a:
         new_list.append(list_b.value)
-        list_b = list_b.next_
+        list_b = list_b.next_node
 
     return new_list
 
