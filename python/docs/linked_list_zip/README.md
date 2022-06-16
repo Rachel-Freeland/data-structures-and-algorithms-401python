@@ -12,6 +12,7 @@ the remaining list.
 
 ## Solution
 [Code](/code_challenges/linked_list_zip.py)
-`zip_lists(list1, list2)` - will return a new list with the values from each list alternating with the other like zipper
+* `zip_lists(list1, list2)` - will return a new list with the values from each list alternating with the other like
+zipper
 teeth.
 
