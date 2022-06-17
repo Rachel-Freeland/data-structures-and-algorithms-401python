@@ -2,6 +2,13 @@ from data_structures.queue import Queue
 
 
 class Node:
+    """
+    Attribute:
+        self.left: refers to the left child node, if there is one
+        self.right: refers to the right child node, if there is one
+        self.value: the data stored in the node
+    An object that has properties for the value stored in the Node of a tree.
+    """
 
     def __init__(self, value, left=None, right=None):
         self.left = left
@@ -12,7 +19,16 @@ class Node:
 
 class BinaryTree:
     """
-    Creates a tree class and defines the methods that work with it.
+    Attribute:
+        self.root: the uppermost node in the tree
+    Methods:
+        pre_order()
+        in_order()
+        post_order()
+        find_maximum_value()
+        add(value)
+    A node-based data structure where each node can have links to multiple nodes. The tree has a 'root' node that is
+    located at the top level of the tree.
     """
 
     def __init__(self, root=None, values=None):
@@ -23,12 +39,25 @@ class BinaryTree:
 
     def pre_order(self):
         """
-        Traverses the tree from the root in a pre-order fashion.
-        Return: A list of values in correct order
+        Argument:
+            self
+        Attribute:
+            BigO Time Complexity: O(n)
+        Return:
+            list of values in correct order
+        Traverses the tree from the root in a "pre-order" fashion.
         """
 
-        def walk(root, values):  # The root at that moment. root = Node or None. Recursive Fx
-            # Every recursive fx needs to know when to stop, aka a "base case"
+        def walk(root, values):
+            """
+            Argument:
+                root: at that moment in time
+                values: the values to be carried
+            Return:
+                nothing
+            This method takes in the root at that moment in time and recursively traverses the tree until the
+            "base case" is reached.
+            """
             if not root:
                 return
             # Task 1: Do something
@@ -46,12 +75,25 @@ class BinaryTree:
 
     def in_order(self):
         """
+        Argument:
+            self
+        Attribute:
+            BigO Time Complexity: O(n)
+        Return:
+            A list of values in correct order
         Traverses the tree from the left in an "in-order" fashion.
-        Return: A list of values in correct order
         """
 
-        def walk(root, values):  # The root at that moment. root = Node or None. Recursive Fx
-            # Every recursive fx needs to know when to stop, aka a "base case"
+        def walk(root, values):
+            """
+            Argument:
+                root: at that moment in time
+                values: the values to be carried
+            Return:
+                nothing
+            This method takes in the root at that moment in time and recursively traverses the tree until the
+            "base case" is reached.
+            """
             if not root:
                 return
 
@@ -71,12 +113,24 @@ class BinaryTree:
 
     def post_order(self):
         """
-        Traverses the tree from the root in a post-order fashion.
+        Argument:
+            self
+        Attribute:
+            BigO Time Complexity: O(n)
         Return: A list of values in correct order
+        Traverses the tree from the root in a "post-order" fashion.
         """
 
-        def walk(root, values):  # The root at that moment. root = Node or None. Recursive Fx
-            # Every recursive fx needs to know when to stop, aka a "base case"
+        def walk(root, values):
+            """
+            Argument:
+                root: at that moment in time
+                values: the values to be carried
+            Return:
+                nothing
+            This method takes in the root at that moment in time and recursively traverses the tree until the
+            "base case" is reached.
+            """
             if not root:
                 return
             # Task 1: Go left
@@ -95,8 +149,13 @@ class BinaryTree:
 
     def find_maximum_value(self):
         """
-        Arguments: none -->
-        Returns --> the max value found in the tree
+        Argument:
+            self
+        Attribute:
+            BigO Time Complexity: O(n)
+        Return:
+            the max value found in the tree
+        Traverses the tree in an "in-order" fashion and returns the largest value found in the tree
         """
         # Credit here goes to Dwight Lindquist, I couldn't figure out where I was going wrong until I realized that I
         # was trying to re-invent the wheel so-to-speak. His approach made way more sense to me than the approach I was
@@ -104,7 +163,6 @@ class BinaryTree:
 
         if self.root:
             values = self.in_order()
-            # Set the starting max_value to 0 for a clean slate
             max_value = 0
 
             for num in values:
@@ -125,13 +183,13 @@ class BinaryTree:
         queue.enqueue(self.root)
         while not queue.is_empty():
             front = queue.dequeue()
-            if front.left is not None:
+            if not front.left:
                 front.left = node
                 return
             else:
                 queue.enqueue(front.left)
 
-            if front.right is not None:
+            if not front.right:
                 front.right = node
                 return
             else:

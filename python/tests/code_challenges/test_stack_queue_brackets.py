@@ -32,12 +32,10 @@ def test_validates_two_parentheses():
     assert actual == expected
 
 
-
 def test_fails_two_parentheses_flipped():
     actual = multi_bracket_validation(")(")
     expected = False
     assert actual == expected
-
 
 
 def test_multi():

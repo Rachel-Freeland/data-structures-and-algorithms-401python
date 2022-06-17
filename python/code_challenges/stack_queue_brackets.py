@@ -1,17 +1,20 @@
 from data_structures.stack import Stack
 
 
-def multi_bracket_validation(str_):
+def multi_bracket_validation(string):
     """
-    Arguments: string -->
-    Returns: bool -->
+    Argument:
+        string
+    Return:
+        bool
     Returns a boolean value to make sure that each type of bracket
-    `()`, `[]`, and `{}` has an opening and closing bracket."""
+    `()`, `[]`, and `{}` has an opening and closing bracket.
+    """
 
     stack = Stack()
     close_brace = [")", "}", "]"]
 
-    for char in str_:
+    for char in string:
         if stack.is_empty() and char in close_brace:
             return False
         else:

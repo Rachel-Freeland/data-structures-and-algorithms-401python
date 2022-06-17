@@ -6,7 +6,6 @@ boolean indicating if the string brackets are balanced.
 ![validation](validation.png)
 
 ## Approach & Efficiency
-[Code](/code_challenges/stack_queue_brackets.py)
 * BigO for this function is O(n) for space and O(1) for time.
 * Begin by checking if the stack is empty and if the character in question is a closing brace.
 * If empty and a closing brace, return False
@@ -17,6 +16,7 @@ boolean indicating if the string brackets are balanced.
 * If all values have the correct corresponding brace, return True
 
 ## Solution
+[Code](/code_challenges/stack_queue_brackets.py)
 
 ```text
 Input	                                     Output

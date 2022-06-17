@@ -3,7 +3,7 @@ from data_structures.queue import Queue
 
 class AnimalShelter:
     """
-    Enqueues and dequeue dogs and cats only
+    Enqueues and dequeues dogs and cats only
     """
 
     def __init__(self):
@@ -12,8 +12,10 @@ class AnimalShelter:
 
     def enqueue(self, animal):
         """
-        Arguments: an animal, as an object -->
-        Returns: nothing -->
+        Argument:
+            an animal: as an obj
+        Return:
+            nothing -->
         This method enqueues the animals into the appropriate Queue.
         """
         if isinstance(animal, Dog):
@@ -25,8 +27,10 @@ class AnimalShelter:
 
     def dequeue(self, pref):
         """
-        Arguments: pref, a string -->
-        Return: either a dog or a cat, based on preference -->
+        Argument:
+            pref: as a string
+        Return:
+             obj: either a dog or a cat, based on preference
         This method takes in a preference and returns the correct animal.
         """
         if pref.lower() == "dog":

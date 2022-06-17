@@ -3,19 +3,34 @@ from data_structures.binary_tree import BinaryTree, Node
 
 class BinarySearchTree(BinaryTree):
     """
-    Creates a subclass of the Binary tree that has additional methods
+    Method:
+        add()
+        contains()
+    Creates a subclass of the Binary tree that has additional methods and abides by certain rules:
+    - Each node must have one "left" and one "right" child.
+    - A node's left descendants can only contain values that are less than the node itself
+    - A node's right descendants can only contain values that are greater than the node itself
     """
 
     def add(self, value):
         """
-        Arguments: value ->
-        Returns: Nothing
+        Argument:
+            value
+        Return:
+            Nothing
         Adds a new node with that value in the correct location in the binary tree search
         """
 
         def walk(root, new_node):
-
-            # base case
+            """
+            Argument:
+                root: at that moment in time
+                values: the values to be carried
+            Return:
+                nothing
+            This method takes in the root at that moment in time and recursively traverses the tree until the
+            "base case" is reached.
+            """
             if not root:
                 return
 
@@ -42,12 +57,25 @@ class BinarySearchTree(BinaryTree):
 
     def contains(self, value):
         """
-        Arguments: value ->
-        Returns: boolean
+        Argument:
+            value
+        Attribute:
+            BigO Time Complexity: O(n)
+        Return:
+            boolean
         Indicates whether a value is in the tree
         """
 
         def walk(root, value):
+            """
+            Argument:
+                root: at that moment in time
+                values: the values to be carried
+            Return:
+                nothing
+            This method takes in the root at that moment in time and recursively traverses the tree until the
+            "base case" is reached.
+            """
             if root is None:
                 return False
 

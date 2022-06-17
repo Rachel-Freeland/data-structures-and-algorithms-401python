@@ -2,6 +2,12 @@ from data_structures.queue import Queue
 
 
 def breadth_first(tree):
+    """
+    Argument:
+        tree: as a data structure
+    Return:
+        a collection of tree values
+    """
     tree_values = []
     queue = Queue()
 

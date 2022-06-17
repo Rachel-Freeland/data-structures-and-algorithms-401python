@@ -10,8 +10,9 @@ Then, loop through the array with a `for` loop comparing each number to the max_
 current max_value then, set max_value to equal the new number. Return the max_value once the loop is complete.
 
 ## Solution
+[Code](/data_structures/binary_tree.py) <br/>
 To run the code, just call the method on a tree:
-`tree.find_maximum_value()`
+* `tree.find_maximum_value()`
 
 ![Tree Visual](Tree_viz.png)
 

@@ -31,15 +31,17 @@
   * Can successfully return a collection from a `post_order` traversal.
   * Returns `True` or `False` for the `.contains()` method, given an existing or non-existing node value.
 ## API
-For the Binary Tree:
-* `.pre_order()`
-* `.in_order()`
-* `.post_order()`
+[Binary Tree Code](/data_structures/binary_tree.py)
+* For the Binary Tree:
+  * `.pre_order()`
+  * `.in_order()`
+  * `.post_order()`
 
-For the Binary Search Tree:
-Since the binary search tree extends the binary tree, it inherits the above APIs in addition to:
-* `.add()`
-* `.contains()`
+[Binary Search Tree Code](/data_structures/binary_search_tree.py)
+* For the Binary Search Tree:
+* Since the binary search tree extends the binary tree, it inherits the above APIs in addition to:
+  * `.add()`
+  * `.contains()`
 
 
 ![Tree](Tree.png)
