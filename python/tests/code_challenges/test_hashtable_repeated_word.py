@@ -56,7 +56,6 @@ def test_punctuation():
     assert actual == expected
 
 
-@pytest.mark.skip
 def test_punctuation_joins():
     txt = """
   apple
