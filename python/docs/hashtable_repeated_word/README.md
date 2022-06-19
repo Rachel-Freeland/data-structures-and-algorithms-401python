@@ -2,7 +2,7 @@
 Write a function called first_repeated_word that finds the first word to appear more than once in a string.
 
 ## Whiteboard Process
-![whiteboard](White Board.png)
+![whiteboard](hashmap-repeated-word.png)
 
 ## Approach & Efficiency
 [Code](/code_challenges/hashtable_repeated_word.py)
