@@ -7,7 +7,6 @@ def test_exists():
     assert fizz_buzz_tree
 
 
-@pytest.mark.skip("TODO")
 def test_one_to_15_fizzy_clone(tree):
 
     fizzy_tree = fizz_buzz_tree(tree)
@@ -30,12 +29,12 @@ def test_one_to_15_fizzy_clone(tree):
         "13",
         "14",
         "FizzBuzz",
-    ]
+        ]
 
     assert actual == expected
 
 
-@pytest.mark.skip("TODO")
+@pytest.mark.skip()
 def test_new_copy_returned(tree):
 
     fizz_buzz_tree(tree)
@@ -58,7 +57,7 @@ def test_new_copy_returned(tree):
         13,
         14,
         15,
-    ]
+        ]
 
     assert actual == expected
 

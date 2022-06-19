@@ -7,11 +7,9 @@ class KaryTree:
 
     def breadth_first(self):
         queue = Queue()
-
         collection = []
 
         queue.enqueue(self.root)
-
         while not queue.is_empty():
             node = queue.dequeue()
             collection.append(node.value)

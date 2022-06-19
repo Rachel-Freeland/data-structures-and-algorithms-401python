@@ -34,7 +34,6 @@ def test_in_order(tree):
     assert actual == expected
 
 
-
 def test_post_order(tree):
     actual = tree.post_order()
     expected = ["d", "e", "b", "f", "g", "c", "a"]  # Post_order: left -> right -> root
