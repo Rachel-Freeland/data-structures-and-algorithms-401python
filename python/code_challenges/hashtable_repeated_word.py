@@ -12,7 +12,6 @@ def first_repeated_word(text):
     """
     pattern = r"\W+(?!\S*[a-z])|(?<!\S)\W+"
     new_string = re.sub(pattern, " ", text).lower().split()
-    print(new_string)
     dic = {}
 
     for word in new_string:
