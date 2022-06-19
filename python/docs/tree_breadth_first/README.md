@@ -3,7 +3,7 @@ Write a function called breadth_first(tree) that takes in a tree and lists all t
 they were encountered.
 
 ## Whiteboard Process
-![Tree](tree_breadth_first.png)
+![Tree](breadth_first.png)
 
 ## Approach & Efficiency
 [Code](/code_challenges/tree_breadth_first.py)
