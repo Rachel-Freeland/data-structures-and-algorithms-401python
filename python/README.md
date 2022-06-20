@@ -7,20 +7,28 @@
 Each type of code challenge has slightly different instructions. Please refer to the notes and examples below for
 instructions for each DS&A assignment type.
 
-### List of Data Structures Completed
+### List of Data Structures and Code Challenges Completed
 
-- [array binary search](docs/array-binary-search/README.md)
-- [array-insert-shift](docs/array-insert-shift/README.md)
-- [array-reverse](docs/array-reverse/README.md)
-- [Linked Lists](docs/linked_list/README.md)
-- [Linked lists insertions](docs/linked_list_insertions/README.md)
-- [Linked lists kth value](docs/linked_list_kth/README.md)
-- [Linked list zip](docs/linked_list_zip/README.md)
-- [Stack and Queue](docs/stack_and_queue/README.md)
-- [Stack and Queue pseudo](docs/stack_queue_pseudo/README.md)
-- [Stack and Queue animal shelter](docs/stack_queue_animal_shelter/README.md)
+- [Array Binary Search](docs/array-binary-search/README.md)
+- [Array Insert Shift](docs/array-insert-shift/README.md)
+- [Array Reverse](docs/array-reverse/README.md)
+- [Graph](docs/graph/README.md)
 - [Hashtables](docs/hashtable/README.md)
-- []()
+- [Hashtable Left Join](docs/hashtable_left_join/README.md)
+- [Hashtable Repeated Word](/docs/hashtable_repeated_word/README.md)
+- [Linked Lists](docs/linked_list/README.md)
+- [Linked Lists Insertions](docs/linked_list_insertions/README.md)
+- [Linked Lists k<sup>th</sup> Value](docs/linked_list_kth/README.md)
+- [Linked List Zip](docs/linked_list_zip/README.md)
+- [Stack and Queue](docs/stack_and_queue/README.md)
+- [Stack and Queue Animal Shelter](docs/stack_queue_animal_shelter/README.md)
+- [Stack and Queue Brackets](docs/stack_queue_brackets/README.md)
+- [Stack and Queue Pseudo](docs/stack_queue_pseudo/README.md)
+- [Trees](docs/trees/README.md)
+- [Tree Breadth First](docs/tree_breadth_first/README.md)
+- [Tree Fizz Buzz](docs/tree_fizz_buzz/README.md)
+- [Tree Intersection](docs/tree_intersection/README.md)
+- [Tree Max](docs/tree_max/README.md)
 
 ### Data Structure: New Implementation
 

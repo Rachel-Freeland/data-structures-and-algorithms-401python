@@ -4,8 +4,8 @@ by line segments named `edges`.
 
 ## Challenge
 This is a new data structure implementation
-* [Solution](/python/data_structures/graph.py)
-* [Tests](/python/tests/data_structures/test_graph.py)
+* [Solution](/data_structures/graph.py)
+* [Tests](/tests/data_structures/test_graph.py)
 
 ## Approach & Efficiency
 This is an implementation of a graph represented by an adjacency list (a dictionary-like list, a hash table)
