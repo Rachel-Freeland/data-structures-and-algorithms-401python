@@ -12,8 +12,10 @@ class Hashtable:
 
     def hash(self, key):
         """
-        Arguments: key as a string -->
-        Returns: index in the collection for the key-->
+        Argument:
+            key: as a string
+        Return:
+            index in the collection for the key
         This method returns a hashed key for the index of the array where the key/value pair should be placed.
         """
         chars_sum = 0
@@ -28,8 +30,11 @@ class Hashtable:
 
     def set(self, key, value):
         """
-        Arguments: a key as a string, and a value -->
-        Returns: nothing -->
+        Argument:
+            key: as a string
+            value
+        Return:
+            nothing
         This method hashes the key and sets the key/value pair in the table, handles collisions as needed,
         and should a given key already exist, the value will be replaced with the value argument given in the method
         call.
@@ -46,8 +51,10 @@ class Hashtable:
 
     def get(self, key):
         """
-        Arguments: a key as a string -->
-        Returns: value associated with that key -->
+        Argument:
+            key: as a string
+        Return:
+            value associated with that key
         This method takes in a key, hashes it, and retrieves the value associated with that index.
         """
         index = self.hash(key)
@@ -61,14 +68,16 @@ class Hashtable:
             if current_key == key:
                 return pair[1]
 
-            current = current.next_
+            current = current.next_node
 
         return None
 
     def contains(self, key):
         """
-        Arguments: a key as a string -->
-        Returns: a boolean value -->
+        Argument:
+            key: as a string
+        Return:
+            boolean value
         This method takes in a key and returns a boolean value indicating if the key exists in the table.
         """
         index = self.hash(key)
@@ -81,10 +90,16 @@ class Hashtable:
             while current:
                 if current.value[0] == key:
                     return True
-                current = current.next_
+                current = current.next_node
             return False
 
     def keys(self):
+        """
+        Argument:
+            self
+        Return:
+            list of keys in the hashtable
+        """
         key_list = []
 
         for bucket in self.buckets:
@@ -93,5 +108,5 @@ class Hashtable:
                 while current:
                     pair = current.value
                     key_list.append(pair[0])
-                    current = current.next_
+                    current = current.next_node
         return key_list
